@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Partner</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="chat-container">
+        <!-- Beautiful Header -->
+        <header>
+            <div class="logo-area">
+                <h1>Student Partner</h1>
+                <p class="subtitle">Your strict study partner</p>
+            </div>
+            
+            <!-- Upload Area -->
+            <div class="upload-area">
+                <label for="pdf-upload" class="upload-btn">
+                    📄 Upload Notes
+                </label>
+                <input type="file" id="pdf-upload" accept=".pdf" hidden>
+                <span id="upload-status"></span>
+            </div>
+        </header>
+        
+        <!-- Chat Area -->
+        <div id="chatbox" class="chatbox">
+            <div class="message bot">
+                Hi! I'm Student Partner. Upload your PDF notes, and I'll quiz you strictly on them.
+            </div>
+        </div>
+        
+        <!-- Input Area -->
+        <div class="input-area">
+            <input type="text" id="user-input" placeholder="Type your message..." autocomplete="off">
+            <button id="send-btn">Send</button>
+        </div>
+    </div>
+    
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
